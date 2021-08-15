@@ -1,0 +1,135 @@
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* IBM Plex */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+
+:root {
+	/* Type */
+	--font-family-sans : 'Poppins', sans-serif;
+	--font-family-mono : 'IBM Plex Mono', monospace;
+	--base-font-size : 22px;
+	--base-line-height : 1.75;
+	--text-s3 : 0.422rem;
+	--text-s2 : 0.563rem;
+	--text-s1 : 0.75rem;
+	--text-base : 1rem;
+	--text-l1 : 1.333em;
+	--text-l2 : 1.777em;
+	--text-l3 : 2.369em;
+	--text-l4 : 3.157em;
+	--text-l5 : 4.209em;
+
+	/* Fonts */
+	--f-lightest : 200;
+	--f-light : 300;
+	--f-normal : 400;
+	--f-bold : 700;
+	--f-black : 900;
+
+	/* Colours */
+	--white : #FEFCFB;
+	--green : #1282A2;
+	--blue : #1282A2;
+	--dark-blue : #001F54;
+	--black-blue : #0A1128;
+	--gray: #f4f4f4;
+	--ok : #7ADFBB;
+	--warning : #FDE74C;
+	--danger : #AC3931;
+
+	/* Default */
+	--body-text-color: var(--black-blue);
+	--body-bg-color: var(--white);
+
+	/* Width */
+	--max-width : 1280px;
+	--max-width-content: 720px;
+	--gutter: 3rem;
+
+	/* Shadow */
+	--shadow-subtle : 0px 0px 7px -4px rgba(0,0,0,0.5);
+
+	/* Break points */
+}
+
+body {
+	background-color: var(--body-bg-color);
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+h1 {
+	font-size: var(--text-l3);
+	line-height: 1.2;
+	font-weight: var(--f-black);
+	margin-top: 2.5rem;
+	margin-bottom: 0.5rem;
+}
+h2 {
+	font-size: var(--text-l2);
+	line-height: 1.1;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	font-weight: var(--f-bold);
+}
+h3 {
+	font-size: var(--text-l1);
+	line-height: var(--base-line-height);
+	margin-bottom: 1rem;
+	margin-top: 2rem;
+	font-weight: var(--f-normal);
+	line-height: 1.1;
+}
+h4 { 
+	font-size: var(--text-base); 
+	line-height: var(--base-line-height);
+}
+h5 { 
+	font-size: var(--text-s1); 
+	line-height: var(--base-line-height);
+}
+h6 { 
+	font-size: var(--text-s2); 
+	line-height: var(--base-line-height);
+}
+p { 
+	font-size: var(--text-base); 
+	line-height: var(--base-line-height);
+	font-weight: var(--f-lightest);
+}
+
+blockquote {
+	margin: 1rem 0;
+	font-size: var(--text-l1);
+	line-height: 1.4;
+	color: var(--white);
+	border: 1px solid var(--blue);
+	padding: 1rem;
+	background-color: var(--blue);
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: var(--gray);
+	font-family: "Courier 10 Pitch", courier, monospace;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
