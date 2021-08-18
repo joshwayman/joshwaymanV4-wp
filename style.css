@@ -1,5 +1,5 @@
 /*!
-Theme Name: joshwaymanV4
+Theme Name: Josh Wayman V4
 Theme URI: http://underscores.me/
 Author: Josh Wayman
 Author URI: http://joshwayman.com
@@ -718,6 +718,7 @@ textarea {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	color: inherit;
 }
 
 /* Small menu. */
@@ -1025,7 +1026,7 @@ textarea {
 	/* Colours */
 	--white : #FEFCFB;
 	--green : #1282A2;
-	--blue : #1282A2;
+	--blue: #1254a2;
 	--dark-blue : #001F54;
 	--black-blue : #0A1128;
 	--gray: #f4f4f4;
@@ -1297,7 +1298,7 @@ a.img-wrapper {
 }
 
 
-.article-list a.img-wrapper {
+.article-list a.img-wrapper, .article-list .tags {
     max-width: 24rem;
     margin-left: -5rem;
 }
@@ -1323,8 +1324,6 @@ header.entry-header {
 .site-header {
     max-width: var(--max-width-content);
     margin: 0 auto;
-    padding-left: var(--gutter);
-    padding-right: var(--gutter);
 }
 
 .entry-meta {
@@ -1333,7 +1332,7 @@ header.entry-header {
     font-family: var(--font-family-mono);
 }
 
-footer .footer-inner {max-width: var(--max-width-content);margin: 0 auto;padding-left: var(--gutter);padding-right: var(--gutter);}
+footer .footer-inner {max-width: var(--max-width-content);margin: 0 auto;}
 
 .footer-inner {}
 
@@ -1423,8 +1422,8 @@ article .entry-header {
     display: flex;
     font-size: var(--text-s1);
 }
-span.cat-links a {
-    display: block;
+span.cat-links a, span.tags-links a {
+    display: inline-block;
     font-weight: var(--f-normal);
 }
 
@@ -1437,6 +1436,133 @@ span.archive-title span {
     font-size: var(--text-l3);
     display: block;
     font-weight: var(--f-black);
+}
+
+textarea {
+    background-color: transparent;
+    color: var(--body-text-color);
+}
+
+small.image-attribution {
+    font-size: var(--text-s2);
+    /* opacity: 0.5; */
+}
+
+p.featured-img-caption {
+    font-size: inherit;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+ul.related-posts {
+    font-size: var(--text-s1);
+}
+
+.entry-meta-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag {
+    font-size: var(--text-s1);
+    margin-left: 0.5rem;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 0.15rem 0.5rem;
+    font-weight: var(--f-light);
+    font-family: var(--font-family-mono);
+}
+
+footer.entry-footer .cat-links, footer.entry-footer .tags-links, footer.entry-footer .edit-link {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.article-list .tags {
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 0.75rem;
+    margin-bottom: -2.25rem;
+}
+
+.article-list .tags .tag {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+    float: right;
+    font-size: var(--text-s2);
+}
+
+p.site-title a {
+    color: inherit;
+}
+
+.main-navigation li.current-menu-item {
+    color: var(--blue);
+    font-weight: var(--f-normal);
+}
+
+.tag a {
+    color: inherit;
+}
+
+h2.entry-title a {
+    color: inherit;
+}
+
+.entry-meta a {
+    color: inherit;
+}
+
+.article-list-footer {
+    width: 100%;
+}
+
+.article-list-footer .nav-links {
+    flex-direction: row;
+    font-weight: var(--f-lght);
+    font-size: var(--text-s1);
+    justify-content: flex-end;
+}
+
+.article-list-footer .nav-links .nav-previous {
+    order: 2;
+    padding-left: 1rem;
+    flex: 1 0 auto;
+    flex-shrink: 1;
+    max-width: 5.5rem;
+}
+
+.article-list-footer .nav-links .nav-next {
+    padding-right: 1rem;
+    order: 1;
+    text-align: left;
+}
+
+.article-list-footer .nav-links .nav-previous:first-child {
+    text-align: right;
+}
+
+input {
+    background-color: var(--gray);
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+p.comment-form-cookies-consent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    font-size: var(--text-s1);
+}
+
+input#wp-comment-cookies-consent {
+    margin-top: 4px;
+    margin-right: 13px;
 }
 
 /* Large devices (desktops, less than 1200px) */
@@ -1458,7 +1584,8 @@ span.archive-title span {
 		padding-right: 0;
 	}
 	.single .entry-header, .single .entry-content, .single .entry-footer,
-	.page .entry-header, .page .entry-content, .page .entry-footer, .comments-area {
+	.page .entry-header, .page .entry-content, .page .entry-footer, .comments-area, 
+	.site-footer, .site-header {
 		padding-left: var(--gutter);
 		padding-right: var(--gutter);
 	}
@@ -1482,6 +1609,9 @@ span.archive-title span {
 	}
 	nav.navigation.post-navigation {
 		padding: 1rem var(--gutter) 0;
+	}
+	small p.featured-img-caption {
+		padding-left: var(--gutter);
 	}
 }
 
@@ -1531,7 +1661,7 @@ span.archive-title span {
 		flex-direction: column;
 	}
 	.site-hero {
-		min-height: 60vh;
+		min-height: 86vh;
 		overflow: hidden;
 	}
 	.article-list article {
@@ -1539,7 +1669,7 @@ span.archive-title span {
 		align-items: stretch;
 	}
 
-	.article-list a.img-wrapper {
+	.article-list a.img-wrapper, .article-list .tags {
 		margin-left:0;
 		max-width: 20rem;
 	}
@@ -1555,6 +1685,7 @@ span.archive-title span {
 	:root {
 		--base-font-size : 16px;
 		--gutter: 1.5rem;
+		
 	}
 	.nav-wrapper {
 		flex-direction: column;
@@ -1581,11 +1712,31 @@ span.archive-title span {
 		margin-right: -9rem;
 		margin-top: -3rem;
 	}
+	ul.related-posts {
+		font-size: var(--text-base);
+		padding-left: var(--gutter);
+		margin-bottom: 0;
+		padding-bottom: 30px;
+	}
+	ul.related-posts li {
+		padding-bottom: 10px;
+	}
+
+	.entry-footer {
+		padding-top: var(--gutter);
+	}
+	.entry-footer, nav.navigation.post-navigation {
+		background-color: var(--gray);
+		margin-top: 0;
+		margin-bottom: 0;
+		box-sizing: border-box;
+	}
+	nav.navigation.post-navigation {
+	}
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		/* Default */
 		--body-text-color: var(--white);
 		--body-bg-color: black;
 		
@@ -1605,9 +1756,14 @@ span.archive-title span {
 	.site-hero p.site-description {
 		background-color: black;
 	}
+	img {
+		filter: brightness(0.7);
+	}
 }
 
-textarea {
-    background-color: transparent;
-    color: var(--body-text-color);
+
+
+
+.page article.page {
+    margin-bottom: calc(var(--gutter) * 2);
 }

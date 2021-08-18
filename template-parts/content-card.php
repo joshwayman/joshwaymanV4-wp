@@ -10,6 +10,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<div class="tags">
+		<?php echo get_the_tag_list('<span class="tag">', ' ', '</span>'); ?>
+	</div>
 	<a href="<?php echo esc_url( get_permalink() ) ?>" class="img-wrapper">
 		<?php the_post_thumbnail( 'square-small' ); ?>
 	</a>

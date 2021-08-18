@@ -12,6 +12,14 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
+
+// c/o https://aristath.github.io/github-theme-updater/
+/*
+add_action( 'after_setup_theme', function() {
+	get_template_part( 'inc/Updater' );
+});
+*/
+
 if ( ! function_exists( 'joshwayman_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.

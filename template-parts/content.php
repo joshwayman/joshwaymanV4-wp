@@ -11,7 +11,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="post-banner">
-	<?php the_post_thumbnail('banner'); ?>
+		<?php the_post_thumbnail('banner'); ?>
+		<small class="image-attribution"><?php featuredImgAttribution(); ?></small>
 	</div>
 	
 	<header class="entry-header">
@@ -24,12 +25,14 @@
 
 		if ( 'post' === get_post_type() ) :
 			?>
+
 			<div class="entry-meta">
 				<?php
 				joshwayman_posted_on();
 				joshwayman_posted_by();
 				?>
 			</div><!-- .entry-meta -->
+
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
@@ -62,5 +65,26 @@
 
 	<footer class="entry-footer">
 		<?php joshwayman_entry_footer(); ?>
+
+		<!-- Related Posts -->
+		<h3>Related</h3>
+		<ul class="related-posts">
+		<?php
+			$ids;
+			$categories = get_the_category();
+			foreach( $categories as $category ) {
+				$id = $category->term_id;
+				$ids = $ids .','. $id;
+			} // End foreach 
+			$ids = ltrim($ids, ',');
+		?>
+			<?php query_posts('posts_per_page=6&cat='.$ids); while(have_posts()) : the_post(); ?>
+				<li><a href = "<?php the_permalink(); ?>" class = "list-group-item">
+					<?php the_title(); ?>
+				</a></li>
+			<?php endwhile; wp_reset_query(); ?>
+		<?php 
+		?>
+		</ul>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
