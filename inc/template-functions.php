@@ -75,8 +75,8 @@ add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 150, 150, true );
 add_image_size( 'square', 1200, 1200, true );
 add_image_size( 'tall', 600, 1200, true );
-add_image_size( 'square-small', 600, 600, array('center', 'center') );
 add_image_size( 'banner', 1440, 600, true );
+add_image_size( 'preview', 600, 410, true );
 
 
 

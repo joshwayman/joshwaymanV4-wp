@@ -15,7 +15,7 @@
 		<?php echo get_the_tag_list('<span class="tag">', ' ', '</span>'); ?>
 	</div>
 	<a href="<?php echo esc_url( get_permalink() ) ?>" class="img-wrapper">
-		<?php the_post_thumbnail( 'square-small' ); ?>
+		<?php the_post_thumbnail( 'preview' ); ?>
 	</a>
 	<header class="entry-header">
 		<?php
